@@ -6,7 +6,7 @@
 /*   By: acoste <acoste@student.42perpignan.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/04 00:06:22 by acoste            #+#    #+#             */
-/*   Updated: 2025/10/06 17:48:09 by acoste           ###   ########.fr       */
+/*   Updated: 2025/10/07 04:15:37 by acoste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,9 +79,19 @@ char	*ft_strjoin_without_nl(char *stash, char *buffer)
 	char	*stock;
 	int		i;
 	int		j;
+	int		y;
 
+	// printf("\n\n ||| Ft_strjoin |||\n");
+	// printf("Stash = %s,   buffer = %s \n\t", stash, buffer);
+
+	y = 0;
 	i = ft_strlen(stash) + ft_strlen(buffer);
-	stock = ft_malloc(i);
+	y = ft_search(stash, '\n');
+	if (y == -1)
+	{
+		i++;
+	}
+	stock = ft_malloc(i + 1);
 	i = -1;
 	if (stash)
 	{
@@ -95,20 +105,25 @@ char	*ft_strjoin_without_nl(char *stash, char *buffer)
 			stock[i] = stash[i];
 		}
 	}
+	if (y == -1)
+	{
+		stock[i] = ' ';
+		i++;
+	}
+	i = ft_strlen(stash);
+	if (y == -1)
+		i++;
 	j = -1;
 	if (buffer)
 	{
-		while (buffer[++j])
-		{
-			if (buffer[j] == '\n')
-				break;
+		while (buffer[++j] && buffer[j] != '\n')
 			stock[i + j] = buffer[j];
-		}
 		stock[i + j] = '\0';
 	}
 	if (stash)
 		free(stash);
-
+	if (buffer)
+		free(buffer);
 	printf("My joined stash (ft_strjoin _wn) = %s\n", stock);
 	return (stock);
 }

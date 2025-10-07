@@ -6,7 +6,7 @@
 /*   By: acoste <acoste@student.42perpignan.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/04 00:16:29 by acoste            #+#    #+#             */
-/*   Updated: 2025/10/06 17:47:03 by acoste           ###   ########.fr       */
+/*   Updated: 2025/10/07 04:04:24 by acoste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ char	*ft_strdup(char *src)
 		i++;
 	}
 	dupp[i] = '\0';
+	// if (src)
+	// 	free(src);
 	return (dupp);
 }
 

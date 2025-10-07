@@ -6,7 +6,7 @@
 #    By: acoste <acoste@student.42perpignan.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/20 18:20:06 by acoste            #+#    #+#              #
-#    Updated: 2025/10/06 17:50:52 by acoste           ###   ########.fr        #
+#    Updated: 2025/10/06 23:09:56 by acoste           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = rush-02
 
 NAME_BONUS = rush_bonus
 
-CC = cc
+CC = gcc
 
 CFLAGS = -g -Wall -Wextra -Werror -I ex00
 
@@ -28,7 +28,8 @@ LIST_SRCS = main.c \
 			get_next_line_utils.c \
 			chain.c \
 			split_du_pauvre.c \
-			parsing.c
+			parsing.c \
+			packet.c
 
 LIST_OBJS = $(LIST_SRCS:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: acoste <acoste@student.42perpignan.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 23:59:26 by acoste            #+#    #+#             */
-/*   Updated: 2025/10/06 17:56:25 by acoste           ###   ########.fr       */
+/*   Updated: 2025/10/07 00:47:21 by acoste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,8 @@ int	verif_arg(char *str);
 
 //main
 char	*is_in_my_book(t_dico **dico, char *nb);
+int	ft_packages(char *nb);
+char	*ft_calloc(int height);
+char	*ft_realloc(char *stock, int size);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: acoste <acoste@student.42perpignan.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 17:49:02 by acoste            #+#    #+#             */
-/*   Updated: 2025/10/06 17:52:05 by acoste           ###   ########.fr       */
+/*   Updated: 2025/10/07 01:26:10 by acoste           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	tab_split(char **tab, char *str, char c)
 	write_words(tab[0], str, c);
 	// printf("tab [1] = %s   ,   ", tab[0]);
 	if (str[j] != c)
-		while (str[j] != c)
+		while (str[j] != c && str[j])
 			j++;
 	while ((str[j] == c || str[j] == ' ') && str[j] != '\0')
 		j++;
